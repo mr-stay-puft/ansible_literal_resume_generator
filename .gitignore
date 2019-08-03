@@ -1,2 +1,6 @@
+# exclude everything in output
+output/*
+# but keep the folder with a placeholder file
+!output/.gitkeep
 
 ansible_lrg_inventory__TEST.yaml
