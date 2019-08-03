@@ -5,7 +5,7 @@
 * [Professional Experience](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#professional-experience)
 
 {% for entry in professional_experience %}
-    1. [__{{ entry.title }}__ {{ entry.start_date }} - {{ entry.end_date | default("Present" ) }}](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#{{ entry.title | replace(" ", "-") }}--{{ entry.org | replace(" ", "-") }})
+    1. [__{{ entry.title }}__ {{ entry.start_date }} - {{ entry.end_date | default("Present") }}](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#{{ entry.title | replace(" ", "-") | replace(",", "") }}--{{ entry.org | replace(" ", "-") | replace(",", "") }})
 
 {% endfor %}
 * [Skillset](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#skillset)
@@ -18,7 +18,7 @@
 ## Professional Experience
 ---
 {% for entry in professional_experience %}
-##### {{ entry.start_date }} - {{ entry.end_date | default("Present" ) }}
+##### {{ entry.start_date }} - {{ entry.end_date | default("Present") }}
 **{{ entry.company }}**
 ### __{{ entry.title }}__ – _*{{ entry.org }}*_
 
