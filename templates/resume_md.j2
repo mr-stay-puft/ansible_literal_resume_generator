@@ -1,0 +1,53 @@
+{# For an optimal expierence, use the Jinja Markdown or Jinja Raw Language Mode in VSC your your favorite editor #}
+# Resume for {{ candidates_name }}
+
+* [Professional Experience](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#professional-experience)
+
+{% for entry in professional_experience %}
+    1. [__{{ entry.title }}__ {{ entry.start_date }} - {{ entry.end_date | default("Present" ) }}](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#{{ entry.title }}--{{ entry.org }})
+
+{{% endfor %}}
+{# to-do link vars will need to be sanitized into all lower with '-' for spaces to fit GH url format. #}
+* [Skillset](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#skillset)
+
+* [Continuing Education](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#continuing-education)
+
+* [References](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#references)
+
+## Professional Experience
+---
+{% for entry in professional_experience %}
+##### {{ entry.start_date }} - {{ entry.end_date | default("Present" ) }}
+**{{ entry.company }}**
+### __{{ entry.title }}__ – _*__{{ entry.org }}__*_
+
+  > {{ entry.title_summary }}
+  
+  {% for role in entry.title_roles %}
+  * {{ role }}
+  {% endfor %}
+
+{{% endfor %}}
+
+## Skillset
+---
+{% for skill in skillset %}
+* {{ skill }}
+{% endfor %}
+
+
+## Continuing Education
+---
+
+| Course or Certification | Date Achieved |
+| ----------------------- | ------------- |
+{% for entry in continuing_edu %}
+| {{ entry.des }} | {{entry.date}} | entry.location |
+{% endfor %}
+
+{% if first_run is true %}
+## References
+---
+  - @gituser tag
+  - [Egon Spengler]("Refrence provided contact info or url here.")
+{% endif %}

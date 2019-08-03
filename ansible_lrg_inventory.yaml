@@ -1,0 +1,36 @@
+---
+all:
+  hosts:
+    localhost:
+      ansible_host: 127.0.0.1
+      ansible_connection: local
+  vars:
+    first_run: true
+    candidates_name: Charles
+    candidates_github_username: charlie1970
+    candidates_github_personal_repo: my_stuff
+    personal_repo_branch: develop
+    professional_experience: 
+      - company: Acme Co.
+        start_date: "1970/01/01"
+        end_date: "Current"
+        org: "Assembly Engineering"
+        title: "Title of Job"
+        title_summary: "I am/was very important,because reasons."
+        title_roles:
+          - "Did Stuff Here"
+          - "Also had to do other things."
+    skillset:
+      - a particular
+      - set of skills
+      - i <3 documentation
+    continuing_edu:
+      - des: Skill Class 1
+        date: Aug 2009
+        location: Anytown
+      - des: Fluffy Cloud Painting 101
+        date: Jan 1981
+        location: Anyplace
+      - des: You Are Very Smart
+        date: Mar 2012
+        location: Somewhere
