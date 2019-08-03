@@ -6,7 +6,7 @@
 {% for entry in professional_experience %}
     1. [__{{ entry.title }}__ {{ entry.start_date }} - {{ entry.end_date | default("Present" ) }}](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#{{ entry.title }}--{{ entry.org }})
 
-{{% endfor %}}
+{% endfor %}
 {# to-do link vars will need to be sanitized into all lower with '-' for spaces to fit GH url format. #}
 * [Skillset](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#skillset)
 
@@ -24,10 +24,10 @@
   > {{ entry.title_summary }}
   
   {% for role in entry.title_roles %}
-  * {{ role }}
+ * {{ role }}
   {% endfor %}
 
-{{% endfor %}}
+{% endfor %}
 
 ## Skillset
 ---
@@ -45,7 +45,7 @@
 | {{ entry.des }} | {{entry.date}} | entry.location |
 {% endfor %}
 
-{% if first_run is true %}
+{% if first_run == true %}
 ## References
 ---
   - @gituser tag
