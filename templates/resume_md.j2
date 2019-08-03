@@ -42,7 +42,7 @@
 | Course or Certification | Date Achieved |
 | ----------------------- | ------------- |
 {% for entry in continuing_edu %}
-| {{ entry.des }} | {{entry.date}} | entry.location |
+| {{ entry.des }} | {{entry.date}} | {{entry.location}} |
 {% endfor %}
 
 {% if first_run == true %}
