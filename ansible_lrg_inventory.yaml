@@ -17,25 +17,27 @@ all:
         start_date: 2007/10/10
         end_date: Current
         org: "Defensive Engineering"
-        title: "Title of Job"
-        title_summary: "I am/was very important,because reasons."
+        title: "Engineer"
+        title_summary: "Dispenser going up."
         title_roles:
-          - "Did Stuff Here"
-          - "Also had to do other things."
+          - "Supported the team"
+          - "Defended the point."
+          - "Moved people through my creations."
       - company: Builders League United
         start_date: 2007/10/10
         end_date: 2007/10/10
         org: "Offensive Engineering"
         title: "Builder"
-        title_summary: "I am/was very important,because reasons."
+        title_summary: "Teleporter comin' right up."
         title_roles:
-          - "Did Stuff Here"
-          - "Also had to do other things."
+          - "Supported the teams teleporter infrastructure."
+          - "Oversaw infrastructure upgrades."
+          - "Provided to the needy"
       - company: Acme Co.
         start_date: "1970/01/01"
         end_date: 2007/10/10
-        org: "Assembly Engineering"
-        title: "Title of Job"
+        org: "Boom"
+        title: "Heavy Weapons Guy"
         title_summary: "I am/was very important,because reasons."
         title_roles:
           - "Did Stuff Here"
