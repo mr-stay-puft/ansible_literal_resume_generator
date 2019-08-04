@@ -13,9 +13,27 @@ all:
     candidates_github_personal_repo: my_stuff
     personal_repo_branch: develop
     professional_experience: 
+      - company: Reliable Excavation Demolition
+        start_date: 2007/10/10
+        end_date: Current
+        org: "Defensive Engineering"
+        title: "Title of Job"
+        title_summary: "I am/was very important,because reasons."
+        title_roles:
+          - "Did Stuff Here"
+          - "Also had to do other things."
+      - company: Builders League United
+        start_date: 2007/10/10
+        end_date: 2007/10/10
+        org: "Offensive Engineering"
+        title: "Builder"
+        title_summary: "I am/was very important,because reasons."
+        title_roles:
+          - "Did Stuff Here"
+          - "Also had to do other things."
       - company: Acme Co.
         start_date: "1970/01/01"
-        end_date: "Current"
+        end_date: 2007/10/10
         org: "Assembly Engineering"
         title: "Title of Job"
         title_summary: "I am/was very important,because reasons."
