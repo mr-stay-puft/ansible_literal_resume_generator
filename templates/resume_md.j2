@@ -5,7 +5,7 @@
 * [Professional Experience](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#professional-experience)
 
 {% for entry in professional_experience %}
-    1. [__{{ entry.title }}__ {{ entry.start_date }} - {{ entry.end_date | default("Present") }}](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#{{ entry.title | replace(" ", "-") | replace(",", "") }}--{{ entry.org | replace(" ", "-") | replace(",", "") }})
+    1. [__{{ entry.title }}__ {{ entry.start_date }} - {{ entry.end_date | default("Present") }}](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#{{ entry.title | replace(" ", "-") | replace(",", "") | lower }}--{{ entry.org | replace(" ", "-") | replace(",", "") | lower }})
 
 {% endfor %}
 * [Skillset](https://github.com/{{candidates_github_username}}/{{candidates_github_personal_repo}}/blob/{{personal_repo_branch}}/resume.md#skillset)
@@ -16,7 +16,6 @@
 
 
 ## Professional Experience
----
 {% for entry in professional_experience %}
 ##### {{ entry.start_date }} - {{ entry.end_date | default("Present") }}
 **{{ entry.company }}**
@@ -32,14 +31,12 @@
 
 
 ## Skillset
----
 {% for skill in skillset %}
 * {{ skill }}
 {% endfor %}
 
 
 ## Continuing Education
----
 
 | Course or Certification | Date Achieved |
 | ----------------------- | ------------- |
@@ -51,9 +48,9 @@
 
 
 ## References
----
-  - @gituser tag
-  - [Egon Spengler](https://en.wikipedia.org/wiki/Egon_Spengler)
+
+  - @gituser mention
+  - or link [Egon Spengler](https://en.wikipedia.org/wiki/Egon_Spengler)
 {% endif %}
 
 {% if tell_somebody == true %}
