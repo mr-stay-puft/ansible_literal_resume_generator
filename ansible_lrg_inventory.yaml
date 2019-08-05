@@ -1,0 +1,58 @@
+---
+#v0.1
+all:
+  hosts:
+    localhost:
+      ansible_host: 127.0.0.1
+      ansible_connection: local
+  vars:
+    first_run: true
+    tell_somebody: true
+    candidates_name: Charles
+    candidates_github_username: charlie1970
+    candidates_github_personal_repo: my_stuff
+    personal_repo_branch: develop
+    professional_experience: 
+      - company: Reliable Excavation Demolition
+        start_date: 2007/10/10
+        end_date: Current
+        org: "Defensive Engineering"
+        title: "Engineer"
+        title_summary: "Dispenser going up."
+        title_roles:
+          - "Supported the team"
+          - "Defended the point."
+          - "Moved people through my creations."
+      - company: Builders League United
+        start_date: 2007/10/10
+        end_date: 2007/10/10
+        org: "Offensive Engineering"
+        title: "Builder"
+        title_summary: "Teleporter comin' right up."
+        title_roles:
+          - "Supported the teams teleporter infrastructure."
+          - "Oversaw infrastructure upgrades."
+          - "Provided to the needy"
+      - company: Acme Co.
+        start_date: "1970/01/01"
+        end_date: 2007/10/10
+        org: "Boom"
+        title: "Heavy Weapons Guy"
+        title_summary: "I am/was very important,because reasons."
+        title_roles:
+          - "Did Stuff Here"
+          - "Also had to do other things."
+    skillset:
+      - a particular
+      - set of skills
+      - i <3 documentation
+    continuing_edu:
+      - des: Skill Class 1
+        date: Aug 2009
+        location: Anytown
+      - des: Fluffy Cloud Painting 101
+        date: Jan 1981
+        location: Anyplace
+      - des: You Are Very Smart
+        date: Mar 2012
+        location: Somewhere
