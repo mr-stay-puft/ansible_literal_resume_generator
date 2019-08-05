@@ -26,7 +26,7 @@
   {% for role in entry.title_roles %}
  * {{ role }}
   {% endfor %}
-
+---
 {% endfor %}
 
 
@@ -38,8 +38,8 @@
 
 ## Continuing Education
 
-| Course or Certification | Date Achieved |
-| ----------------------- | ------------- |
+| Course or Certification | Date Achieved | Location |
+| ----------------------- | ------------- | -------- |
 {% for entry in continuing_edu %}
 | {{ entry.des }} | {{entry.date}} | {{entry.location}} |
 {% endfor %}
