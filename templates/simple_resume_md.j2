@@ -1,0 +1,44 @@
+{# v0.2 #}
+{# For an optimal expierence, use the Jinja Markdown or Jinja Raw Language Mode in VSC your your favorite editor #}
+# Resume for {{ candidates_name }}
+
+## Skillset
+| {{ skillset | join(", ") }} |
+
+## Professional Experience
+{% for entry in professional_experience %}
+##### {{ entry.start_date }} to {{ entry.end_date | default("Present") }} -- **{{ entry.company }}**
+### __{{ entry.title }}__ – _*{{ entry.org }}*_
+
+  > {{ entry.title_summary }}
+  
+  {% for role in entry.title_roles %}
+ * {{ role }}
+  {% endfor %}
+---
+{% endfor %}
+
+
+## Continuing Education
+
+| Course or Certification | Date Achieved | Location |
+| ----------------------- | ------------- | -------- |
+{% for entry in continuing_edu %}
+| {{ entry.des }} | {{entry.date}} | {{entry.location}} |
+{% endfor %}
+
+{% if first_run == true %}
+
+
+## References
+
+  - @gituser mention
+  - or link [Egon Spengler](https://en.wikipedia.org/wiki/Egon_Spengler)
+{% endif %}
+
+{% if tell_somebody == true %}
+###### Created with [ansible_literal_resume_generator](https://github.com/mr-stay-puft/ansible_literal_resume_generator)
+{% else %}
+{# Credit to Magnus on SO for this MD 'comment' trick - https://stackoverflow.com/a/20885980 #}
+[//]: # (Created with ansible_literal_resume_generator - https://github.com/mr-stay-puft/ansible_literal_resume_generator )
+{% endif %}
