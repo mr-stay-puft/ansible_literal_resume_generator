@@ -6,6 +6,8 @@ all:
       ansible_connection: local
   vars:
     first_run: true
+    template_file: simple_resume_md.j2
+    tell_somebody: true
     candidates_name: Charles
     candidates_github_username: charlie1970
     candidates_github_personal_repo: my_stuff
