@@ -1,10 +1,15 @@
 {# v0.2 #}
 {# For an optimal expierence, use the Jinja Markdown or Jinja Raw Language Mode in VSC your your favorite editor #}
-# Resume for {{ candidates_name }}
-
-## Skillset
+# {{ candidates_name }}
+{% if objective is defined %}
+```
+{{ objective }}
+```
+{% endif %}
+| Skillset |
+| :---------------------------: |
 | {{ skillset | join(", ") }} |
-
+|   |
 ## Professional Experience
 {% for entry in professional_experience %}
 ##### {{ entry.start_date }} to {{ entry.end_date | default("Present") }} -- **{{ entry.company }}**
